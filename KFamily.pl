@@ -16,6 +16,7 @@ hombre('Juan Urdangarin').
 hombre('Pablo').
 hombre('Miguel').
 
+%listado de Sexo de las mujeres
 mujer('Maria Mercedes').
 mujer('Pilar').
 mujer('Sofia').
@@ -29,6 +30,7 @@ mujer('Irene').
 mujer('Leonor').
 mujer('Sofia 2007').
 
+%listado de las relaciones de Madre
 madre('Pilar','Maria Mercedes').
 madre('Juan Carlos I','Maria Mercedes').
 madre('Margarita','Maria Mercedes').
@@ -47,6 +49,7 @@ madre('Irene','Cristina').
 madre('Leonor','Letizia').
 madre('Sofia 2007','Letizia').
 
+%listado de las relaciones de Padre
 padre('Pilar','Juan').
 padre('Juan Carlos I','Juan').
 padre('Margarita','Juan').
@@ -65,6 +68,7 @@ padre('Irene','Inaki').
 padre('Leonor','Felipe VI').
 padre('Sofia 2007','Felipe VI').
 
+%listado de Parejas
 pareja('Maria Mercedes','Juan').
 pareja('Sofia','Juan Carlos I').
 pareja('Margarita','Carlos Zurita').
@@ -72,6 +76,7 @@ pareja('Elena','Jaime').
 pareja('Cristina','Inaki').
 pareja('Letizia','Felipe VI').
 
+%listado de posibles relaciones y preguntas
 esposo(Y,X):-   pareja(Y,X),hombre(X).
 esposa(X,Y):-   pareja(Y,X),mujer(Y).
 hijo(Z,Y,X):-   padre(Z,Y),hombre(Z),madre(Z,X).
